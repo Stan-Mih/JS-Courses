@@ -1,0 +1,18 @@
+div.blue {
+    background-color: blue;
+}
+div.green{
+background-color: green;
+}
+div.red{
+background-color: red;
+}
+div.purple{
+background-color: purple;
+}
+div.orange{
+background-color: orange;
+}
+div{
+    display: inline-block;
+}

@@ -1,0 +1,6 @@
+div.green {background-color: green; width: fit-content;}
+div.blue {background-color: blue; width: fit-content;}
+div.red {background-color: red; width: fit-content;}
+div.purple {background-color: purple; width: fit-content;}
+div.orange {background-color: orange; width: fit-content;}
+div {display:inline-block}
