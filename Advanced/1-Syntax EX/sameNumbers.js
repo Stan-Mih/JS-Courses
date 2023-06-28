@@ -13,13 +13,8 @@ function sameNumbers(param) {
         }
         
     }
-    if(print){
-        console.log("true");
-        console.log(sum);
-    }else{
-        console.log("false");
-        console.log(sum);
-    }
+    console.log(sum);
+    console.log(print);
     
 
 }sameNumbers(2222222)
