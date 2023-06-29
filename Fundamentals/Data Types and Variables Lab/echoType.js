@@ -8,4 +8,6 @@ function echo(input) {
     console.log(type);
     console.log(input);
     }
-}echo()
+}echo('Hello, JavaScript!')
+echo(18)
+echo(null)
