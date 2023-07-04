@@ -15,4 +15,4 @@ console.log(calc[operator](num1,num2));
 calculator(25.5,
     '-',
     3
-    )
+    )   
