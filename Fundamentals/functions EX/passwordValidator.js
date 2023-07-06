@@ -8,8 +8,8 @@ function passwordValidator(inputPass) {
 
     function mustContain2Digits(inputPass) {
         let count = 0;
-        for(let char of inputPass) {
-            if(char >= '0' && char <= 9){
+        for(let char of inputPass) {       //  let charToNum = +char
+            if(char >= '0' && char <= 9){ // (Number.isInteger(charToNum))
                 count++;
             }
         }
