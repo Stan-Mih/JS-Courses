@@ -1,19 +1,7 @@
-function firstAndLastkNums(arr) {
-    
-    let kNum = arr.shift();
-    let firstKNums = arr.slice(0,kNum)
-
-    let stopRrange = arr.length;
-    let startRange = arr.length-kNum;
-    let lastKNums = arr.slice(startRange, stopRrange)
-    console.log(firstKNums);
-    console.log(lastKNums);
+function solve(a,b) {
+let arr = [1,2,3];
+console.log(arr[4-2]);
 }
-
-firstAndLastkNums([2, 
-    7, 8, 9]
-    )
-    firstAndLastkNums([3,
-    6, 7, 8, 9]
-   )
+solve(6, 3)
+solve(8, 2)
 

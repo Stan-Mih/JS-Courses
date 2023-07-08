@@ -1,18 +1,15 @@
-function firstAndLastkNums(arr) {
+function lastKNumbersSequence(len, el) {
     
-    let kNum = arr.shift();
-    let firstKNums = arr.slice(0,kNum)
+    let arr = [1];
 
-    let stopRrange = arr.length;
-    let startRange = arr.length-kNum;
-    let lastKNums = arr.slice(startRange, stopRrange)
-    console.log(firstKNums);
-    console.log(lastKNums);
-}
+    for(let i = 1; i <=len; i++){
+        let lastElements = arr.slice(len- el);
+        console.log(lastElements);
+    }
+        
+    
 
-firstAndLastkNums([2, 
-    7, 8, 9]
-    )
-    firstAndLastkNums([3,
-    6, 7, 8, 9]
-   )
+    
+
+}lastKNumbersSequence(6, 3)
+lastKNumbersSequence(8, 2) 
