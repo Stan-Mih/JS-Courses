@@ -14,14 +14,11 @@ function train(param) {
             
             for(let i = 0; i < numOfWagons; i++) {
                 let peopleInWagon = passangersOnTrain[i];
-                let leftover = (peopleInWagon + passangersToBoard) - capacity; 
-
-                if(leftover <= 0 ){
-                    passangersOnTrain[i] = peopleInWagon += passangersToBoard;
-                    break;             
-                }else {
-
-                }             
+                if((peopleInWagon + passangersToBoard) > capacity){
+                    continue;
+                }else{passangersOnTrain[i] = peopleInWagon + passangersToBoard
+                    break;
+                }                            
             }         
         }
         else {
@@ -29,6 +26,7 @@ function train(param) {
         passangersOnTrain.push(Number(addWagon[1]));
         }
     }
+    console.log(passangersOnTrain.join(" "));
 }
 train(['32 54 21 12 4 0 23',
 '75',
