@@ -1,13 +1,12 @@
-function bombNumbers(arr, nums) {
+function bombNumbers(a, nums) {
 
-    let array = arr.slice(0)
-    let indexOfBomb = array.indexOf(nums[0]);
+    let arr = ["a 2","2","3"];
+   
+for (let iterator of arr) {
+    iterator+=2
+}
+    console.log(arr);
 
-     let explosion = array.splice(2,5);
-    //let explosion = array.splice(0,  2);
-
-    let modifiedArr = 
-    console.log(explosion);
 }
  bombNumbers([1, 2, 2, 4, 2, 2, 2, 9],[4, 2])
  bombNumbers([1, 4, 4, 2, 8, 9, 1],[9, 3])
