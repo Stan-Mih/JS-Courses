@@ -1,14 +1,37 @@
-function bombNumbers(a, nums) {
+function solve (arr) {
+    let list = [];
 
-    let arr = ["a 2","2","3"];
-   
-for (let iterator of arr) {
-    iterator+=2
-}
-    console.log(arr);
+    for(let i = 0 ; i < arr.length; i++){
+        let command = arr[i];
+        let splited = command.split(" ");
+        let name = splited[0];
 
+        if(splited.length === 3){            
+            if(list.includes(name)){
+                console.log(`${name} is already in the list!`);
+                continue;
+            }
+            list.push(splited[0]);
+        }else{
+            if(list.includes(name)){
+                let index = list.indexOf(name);
+                list.splice(index,1);
+            }else{
+                console.log(`${name} is not in the list!`);
+            }
+        }
+    }
+    console.log(list.join("\n"));
 }
- bombNumbers([1, 2, 2, 4, 2, 2, 2, 9],[4, 2])
- bombNumbers([1, 4, 4, 2, 8, 9, 1],[9, 3])
-bombNumbers([1, 7, 7, 1, 2, 3],[7, 1])
- bombNumbers([1, 1, 2, 1, 1, 1, 2, 1, 1, 1],[2, 1])
+solve (['Allie is going!',
+'George is going!',
+'John is not going!',
+'George is not going!']
+)
+solve (['Tom is going!',
+'Annie is going!',
+'Tom is going!',
+'Garry is going!',
+'Jerry is going!']
+) 
+ 
