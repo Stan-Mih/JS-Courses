@@ -1,37 +1,18 @@
 function solve (arr) {
-    let list = [];
 
-    for(let i = 0 ; i < arr.length; i++){
-        let command = arr[i];
-        let splited = command.split(" ");
-        let name = splited[0];
+    arr.sort((a,b) => a-b);
+    let newArr = [];
 
-        if(splited.length === 3){            
-            if(list.includes(name)){
-                console.log(`${name} is already in the list!`);
-                continue;
-            }
-            list.push(splited[0]);
-        }else{
-            if(list.includes(name)){
-                let index = list.indexOf(name);
-                list.splice(index,1);
-            }else{
-                console.log(`${name} is not in the list!`);
-            }
-        }
+    for(let i = 0; i <arr.length; i++){
+        let big = arr.pop();
+        let small = arr.shift();
+        newArr.push(big);
+        newArr.push(small);
     }
-    console.log(list.join("\n"));
+    console.log(newArr);
 }
-solve (['Allie is going!',
-'George is going!',
-'John is not going!',
-'George is not going!']
+solve ([1, 21, 3, 52, 69, 63, 31, 2, 18, 94]
 )
-solve (['Tom is going!',
-'Annie is going!',
-'Tom is going!',
-'Garry is going!',
-'Jerry is going!']
+solve ([34, 2, 32, 45, 690, 6, 32, 7, 19, 47]
 ) 
  
