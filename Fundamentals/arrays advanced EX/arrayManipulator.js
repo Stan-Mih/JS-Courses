@@ -8,7 +8,6 @@ function arrayManipulator(nums, commands) {
         
         let sumPairs = 0;
         let pairsOfSumNums = [];
-
         
         switch (currentCommand) {
             case "add": 
@@ -44,12 +43,7 @@ function arrayManipulator(nums, commands) {
                 break;
             case "print":
                 console.log(`[${nums.join(", ")}]`);
-                break;
-
-                
-                
-        
-           
+                break;          
         }
     }
     
