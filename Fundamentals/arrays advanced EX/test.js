@@ -1,18 +1,25 @@
-function solve (arr) {
+function bombNumbers(arr, nums) {
 
-    arr.sort((a,b) => a-b);
-    let newArr = [];
+    let array = arr.slice(0);
+    const bomb = nums[0];
+    const radius = nums[1];
+    const arrayL = array.length;
 
-    for(let i = 0; i <arr.length; i++){
-        let big = arr.pop();
-        let small = arr.shift();
-        newArr.push(big);
-        newArr.push(small);
+    for (let i = 0; i < arrayL; i++) {
+        let currentEl = array[i];
+        if(currentEl === bomb){
+            array.splice(i-radius, 1 + 2*radius)               
+        }
     }
-    console.log(newArr);
-}
-solve ([1, 21, 3, 52, 69, 63, 31, 2, 18, 94]
-)
-solve ([34, 2, 32, 45, 690, 6, 32, 7, 19, 47]
-) 
- 
+    
+    let sumOfArray = 0;
+    for(let i of array){
+        sumOfArray += i;
+    }
+    console.log(sumOfArray);
+    
+ }bombNumbers([1, 2, 2, 4, 2, 2, 2, 9],[4, 2])
+ bombNumbers([1, 4, 4, 2, 8, 9, 1],[9, 3])
+bombNumbers([1, 7, 7, 1, 2, 3],[7, 1])
+bombNumbers([1, 1, 2, 1, 1, 1, 2, 1, 1, 1],[2, 1])
+
