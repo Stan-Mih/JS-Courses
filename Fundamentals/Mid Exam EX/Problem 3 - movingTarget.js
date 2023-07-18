@@ -8,9 +8,12 @@ let commandAndTarget = commandsAndTargets.shift();
 while(commandAndTarget !== "End"){
 
     let command = commandAndTarget.split(" ");
-    let action = command [0];
-    let indexOfTarget = command [1];
-    let value = command [2];
+    // let action = command [0];
+    // let indexOfTarget = command [1];
+    // let value = command [2];
+
+    let [action, indexOfTarget, value]= command; // array destructuring
+
     let numberOfTargetIndices = targets.length - 1;
 
     switch (action) {

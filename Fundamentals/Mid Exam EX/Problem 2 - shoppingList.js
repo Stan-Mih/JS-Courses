@@ -32,11 +32,54 @@ function shoppingList(input) {
     }
     console.log(initialList.join(", "));
 } 
-// shoppingList((["Tomatoes!Potatoes!Bread",
-// "Unnecessary Milk",
-// "Urgent Tomatoes",
-// "Go Shopping!"])
-// )
+//ALTERNATIVE CODE
+
+// function solve(array) {
+    
+//      const arr = array.slice(0);
+//      let list = arr.shift().split("!");
+//      let comandAndItem = arr.shift();
+ 
+//      while(comandAndItem !== "Go Shopping!"){
+//          let [comand, item, item2] = comandAndItem.split(" ");
+//          comandAndItem = arr.shift();
+//          switch (comand) {
+//              case "Unnecessary":
+//                  if(list.includes(item)){
+//                      let indexOfItem = list.indexOf(item);
+//                      list.splice(indexOfItem,1);
+//                  }
+//                  break;
+//              case "Urgent":
+//                  if(!list.includes(item)){
+//                      list.unshift(item);
+//                  }
+//                  break;
+//              case "Correct":
+//                  if(list.includes(item)){
+//                      let indexOfItem = list.indexOf(item);
+//                      list.splice(indexOfItem,1,item2)
+//                  }
+//                  break;
+//              case "Rearrange":
+//                  if(list.includes(item)){
+//                      let indexOfItem = list.indexOf(item);
+//                      list.splice(indexOfItem,1,).push(item);
+//                  }
+//                  break;
+         
+//              default:
+//                  break;
+//          }
+//      }
+//      console.log(list.join(", "));
+ 
+// }
+shoppingList((["Tomatoes!Potatoes!Bread",
+"Unnecessary Milk",
+"Urgent Tomatoes",
+"Go Shopping!"])
+)
 
 shoppingList((["Milk!Pepper!Salt!Water!Banana",
 "Urgent Salt",
