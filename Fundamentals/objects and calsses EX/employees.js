@@ -9,13 +9,13 @@ function employees(arr) {
             console.log(`Name: ${this.name} -- Personal Number: ${this.num}`);
         }
     }
-    for(let i of arr){
-        let currNameLen = i.length;
-        let currentEmployee = new Employee(i, currNameLen)
+    arr.forEach(person => {
+        let currNameLen = person.length;
+        let currentEmployee = new Employee(person, currNameLen)
         currentEmployee.print();
-    }
-
-}employees([
+    });    
+}
+employees([
     'Silas Butler',
     'Adnaan Buckley',
     'Juan Peterson',
