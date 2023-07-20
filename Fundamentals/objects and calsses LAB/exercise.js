@@ -1,22 +1,49 @@
-function createCats(cats) {
+function songs(input) {
 
-    class Cat  {
-        constructor(catName,catAge){
-        this.name = catName;
-        this.age = catAge;
-        }   
-        meow() {
-            console.log(`${this.name} age ${this.age} says Meow!`);
+    class Song {
+        constructor(typeList, name, time){
+           this.typeList = typeList;
+           this.name = name;
+           this.time = time; 
         }
     }
-    for (const i of cats) {
+    const numOfSongs = input.shift();
+    const whatTypeToPrint = input.pop();
+    let songs = [];
 
-        let [name, age] = i.split(" ")
-        let newCat = new Cat (name,age);
-        newCat.meow();
+    for (const song of input) {
+        const [list, name, time] = song.split("_");
+        let newSong = new Song(list, name, time);
+        songs.push(newSong);
     }
-
-
+    
+    if(whatTypeToPrint === "all"){
+        for (const song of songs) {            
+            console.log(song.name);
+        }
+    }else{
+        for (const song of songs) {
+            if(whatTypeToPrint === song.typeList){
+                console.log(song.name);
+            }
+        }
+    }
 }    
-createCats(['Mellow 2', 'Tom 5'])
-createCats(['Candy 1', 'Poppy 3', 'Nyx 2'])
+songs([3,
+    'favourite_DownTown_3:14',
+   'favourite_Kiss_4:16',
+   'favourite_Smooth Criminal_4:01',
+   'favourite']
+    )
+songs([4,
+    'favourite_DownTown_3:14',
+    'listenLater_Andalouse_3:24',
+    'favourite_In To The Night_3:58',
+    'favourite_Live It Up_3:48',
+    'listenLater']
+    )
+songs([2,
+    'like_Replay_3:15',
+    'ban_Photoshop_3:48',
+    'all']
+    ) 

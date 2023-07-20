@@ -15,7 +15,7 @@ function cats(arr) {
         let localCat = i.split(" ");
         let [name,age] = localCat
         let newCat = new Cat (name, age);
-        newCat.meow();
+        newCat.meow();       
     }  
 
 }cats(['Mellow 2', 'Tom 5'])
