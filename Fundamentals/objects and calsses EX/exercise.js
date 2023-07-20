@@ -1,49 +1,46 @@
-function solve(input) {
+function solve(currStock,orderd) {
 
-    class Employee {
-        constructor(firstName, surrname, num) {
-            this.firstName = firstName;
-            this.surrname = surrname;
-            this.num = num;
-        }
-        print(){
-            console.log(`Name${this.firstName} ${this.surrname} -- ${this.num}`);
+    let stock = {};
+    const currStockL = currStock.length;
+    const orderdL = orderd.length;
+
+    for(let i = 0; i < currStockL; i++){
+        const item = currStock[i];
+        i++;
+        const pcs = Number(currStock[i]);
+        stock[item] = pcs;
+    }
+    for(let i = 0; i < orderdL; i++){
+        const item = orderd[i];
+        i++;
+        const pcs = Number(orderd[i]);
+        if(stock[item]){
+            stock[item] += pcs;
+        }else{
+            stock[item] = pcs;
         }
     }
-    for (const person of input) {
-        const num = person.length;
-        const[firstName,surrname] = person.split(" ")
-        let employee = new Employee(firstName, surrname, num);
-        employee.print()
+    for (const item in stock) {
+        console.log(`${item} -> ${stock[item]}`);        
     }
 
-
-
-
-
-    // let employees = [];
-
-    // for (const personNames of input) {
-    //     const number = personNames.length;
-    //     const [firstName, surrname] = personNames.split(" ");
-    //     const person = new Employee(firstName, surrname, number);
-    //     employees.push(person);
-    // }
-    // for (const employee of employees) {
-    //     console.log(`Name: ${employee.firstName} ${employee.surrname} -- Personal Number: ${employee.num}`);
-    // }
+    
+    
 }
 solve([
-    'Silas Butler',
-    'Adnaan Buckley',
-    'Juan Peterson',
-    'Brendan Villarreal'
+    'Chips', '5', 'CocaCola', '9', 'Bananas', '14', 'Pasta', '4', 'Beer', '2'
+    ],
+    [
+    'Flour', '44', 'Oil', '12', 'Pasta', '7', 'Tomatoes', '70', 'Bananas', '30'
     ]
+    
+
     )
-solve([
-    'Samuel Jackson',
-    'Will Smith',
-    'Bruce Willis',
-    'Tom Holland'
-    ]
-    )
+// solve([
+//     'Salt', '2', 'Fanta', '4', 'Apple', '14', 'Water', '4', 'Juice', '5'
+//     ],
+//     [
+//     'Sugar', '44', 'Oil', '12', 'Apple', '7', 'Tomatoes', '7', 'Bananas', '30'
+//     ]
+    
+//     )

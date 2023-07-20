@@ -25,6 +25,33 @@ function storeProvision(arr1, arr2) {
         console.log(`${prop} -> ${inStock[prop]}`);
     }
 
+    // ALTERNATIVE EXECUTION
+    // function solve(currStock,orderd) {
+
+    //     let stock = {};
+    //     const currStockL = currStock.length;
+    //     const orderdL = orderd.length;
+    
+    //     for(let i = 0; i < currStockL; i++){
+    //         const item = currStock[i];
+    //         i++;
+    //         const pcs = Number(currStock[i]);
+    //         stock[item] = pcs;
+    //     }
+    //     for(let i = 0; i < orderdL; i++){
+    //         const item = orderd[i];
+    //         i++;
+    //         const pcs = Number(orderd[i]);
+    //         if(stock[item]){
+    //             stock[item] += pcs;
+    //         }else{
+    //             stock[item] = pcs;
+    //         }
+    //     }
+    //     for (const item in stock) {
+    //         console.log(`${item} -> ${stock[item]}`);        
+    //     }              
+    //}
 
 }storeProvision([
     'Chips', '5', 'CocaCola', '9', 'Bananas', '14', 'Pasta', '4', 'Beer', '2'
