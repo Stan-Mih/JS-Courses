@@ -7,16 +7,13 @@ function cats(arr) {
         }  
         meow() {
             console.log(`${this.name}, age ${this.age} says Meow`); 
-        }
-        
+        }        
     }
     
     for(i of arr){
 
         let localCat = i.split(" ");
-        let age = +(localCat[1]);
-        let name = localCat[0];
-
+        let [name,age] = localCat
         let newCat = new Cat (name, age);
         newCat.meow();
     }  

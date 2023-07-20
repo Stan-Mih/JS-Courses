@@ -2,8 +2,8 @@ function convertToObject(input) {
 
 let object  = JSON.parse(input);
 
-for(i of Object.keys(object)){
-    console.log(`${i}: ${object[i]}`);
+for(key of Object.keys(object)){
+    console.log(`${key}: ${object[key]}`);
 }
 //return object;
 

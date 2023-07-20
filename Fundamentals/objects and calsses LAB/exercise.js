@@ -1,17 +1,22 @@
-function solve(obj) {
+function createCats(cats) {
 
-    let objKeys = Object.keys(obj);
-
-    for (const key of objKeys) {
-        console.log(`${obj[key]} => ${key}`);          
+    class Cat  {
+        constructor(catName,catAge){
+        this.name = catName;
+        this.age = catAge;
+        }   
+        meow() {
+            console.log(`${this.name} age ${this.age} says Meow!`);
+        }
     }
-    
-}
-solve({
-    name: "Sofia",
-    area: 492,
-    population: 1238438,
-    country: "Bulgaria",
-    postCode: "1000"
-}
-)
+    for (const i of cats) {
+
+        let [name, age] = i.split(" ")
+        let newCat = new Cat (name,age);
+        newCat.meow();
+    }
+
+
+}    
+createCats(['Mellow 2', 'Tom 5'])
+createCats(['Candy 1', 'Poppy 3', 'Nyx 2'])
