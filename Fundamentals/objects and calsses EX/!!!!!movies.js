@@ -1,19 +1,24 @@
 function movies(arr) {
 
-    let movies = [];
+    const movies = [];
+    const moviesAndInfo = [];
+        
 
     arr.forEach(line => {
         
         if(line.includes("addMovie")){
-            let movieName = line.split("addMovie ")[1];
-            movies.push({movieName});
+            const movieName = line.split("addMovie ");
+            movies.push(movieName[1]);
         }else if(line.includes("directedBy")){
             let [name,director] = line.split(" directedBy ");
-            if(movies.includes(name)){
-
+            if(movies.includes(name)){                
+                moviesAndInfo.push({name : name, directior : director});
             }
         }else if(line.includes("onDate")){
             let [name,date] = line.split(" onDate ");
+            if(movies.includes(name)){
+                moviesAndInfo.push({name : name, date : date});
+            }
         }
     });
 
@@ -29,6 +34,24 @@ function movies(arr) {
 
     //     }
     // }
+
+
+
+
+        // arr.forEach(input => {
+    //     const inputLine = input.split(" ");
+    //     const addCommand = inputLine[0];
+    //     const addDirector = inputLine[1];
+    //     const addDate = inputLine[1];
+
+    //     if(addCommand === "addMovie"){
+
+    //     }else if(addDirector === "directedBy"){
+
+    //     }else if(addDate === "addDate"){
+
+    //     }
+    // });
 }movies([
     'addMovie Fast and Furious',
     'addMovie Godfather',
