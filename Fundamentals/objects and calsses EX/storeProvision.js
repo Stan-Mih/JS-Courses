@@ -28,7 +28,7 @@ function storeProvision(arr1, arr2) {
     // ALTERNATIVE EXECUTION
     // function solve(currStock,orderd) {
 
-    //     let stock = {};
+    //     const stock = {};
     //     const currStockL = currStock.length;
     //     const orderdL = orderd.length;
     

@@ -1,6 +1,6 @@
 function solve(currStock,orderd) {
 
-    let stock = {};
+    const stock = {};
     const currStockL = currStock.length;
     const orderdL = orderd.length;
 
