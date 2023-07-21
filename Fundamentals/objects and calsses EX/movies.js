@@ -19,7 +19,7 @@ function movies(arr) {
       }
     }
   });
-  movies.forEach((movie) => {
+  movies.forEach(movie => {
     if (movie.name && movie.date && movie.director) {
       console.log(JSON.stringify(movie));
     }
