@@ -6,7 +6,7 @@ function timeToWalk(steps, stepL, speed) {
 
     const hours = Math.floor(time / 3600);
     const mins = Math.floor(time / 60);
-    const secs = Math.floor(time % 60) 
+    const secs = Math.round(time % 60) 
 
     console.log(`${hours}:${mins}:${secs}`);
    
