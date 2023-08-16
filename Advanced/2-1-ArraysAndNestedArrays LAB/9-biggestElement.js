@@ -1,7 +1,13 @@
 function biggestElement(arr) {
 
-    const  newArr = [...arr] ;
-    console.log([...arr]);
+    const nums = [];
+
+    arr.forEach(el => {
+      nums.push(...el)  
+    });
+    console.log(nums.sort((a,b)=>b-a)[0]);
+
+    
 }
 biggestElement([[20, 50, 10],
     [8, 33, 145]]
