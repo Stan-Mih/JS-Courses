@@ -1,7 +1,7 @@
 function biggestElement(arr) {
 
-    const newArr = [...arr];
-    console.log(newArr);
+    const  newArr = [...arr] ;
+    console.log([...arr]);
 }
 biggestElement([[20, 50, 10],
     [8, 33, 145]]
