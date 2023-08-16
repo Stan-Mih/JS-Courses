@@ -1,6 +1,6 @@
 function processOddPositions(arr) {
-    const odd = [];
 
+    //const odd = [];
     // arr.forEach((el, i) => {
     //     i % 2 !== 0 ? odd.push(el * 2) : null 
     // });
@@ -8,11 +8,13 @@ function processOddPositions(arr) {
 
     //Updated soulution
     
-    const filtered = arr.filter((x , i) => i % 2 !== 0);
-    const doubled = filtered.map(x => x*2);
-    const reversed = doubled.reverse();
+    const procesed = arr
+    .filter((x , i) => i % 2 !== 0)
+    .map(x => x*2)
+    .reverse()
+    .join(" ")
 
-    console.log(reversed.join(" "));
+    return procesed;
    
 }processOddPositions([10, 15, 20, 25])
 processOddPositions([3, 0, 10, 4, 7, 3])
