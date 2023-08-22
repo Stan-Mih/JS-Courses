@@ -3,14 +3,19 @@ function townPopulation(arr) {
 
   arr.forEach((el) => {
     const splited = el.split(" <-> ");
-    if (pop[splited[0]]) {
-      pop[splited[0]] += Number(splited[1]);
+    const name = splited[0];
+    const popupation = splited[1];
+
+    if (pop[name]) {
+      pop[name] += Number(popupation);
     } else {
-      pop[splited[0]] = Number(splited[1]);
+      pop[name] = Number(popupation);
     }
   });
-
-  console.log(pop);
+  for(let key in pop){
+    console.log(`${key} : ${pop[key]}`);
+  }
+ 
 }
 townPopulation([
   "Sofia <-> 1200000",
