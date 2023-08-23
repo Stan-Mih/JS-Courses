@@ -1,4 +1,4 @@
-function cityRecord(name,   population , treasury) {
+function cityRecord(name, population , treasury) {
 
     const city ={
         name : name,
