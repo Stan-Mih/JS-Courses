@@ -3,7 +3,7 @@ function calorieObject(input) {
     const obj = {};
     input.forEach((el ,i) => {
         if(i % 2 === 0){
-            obj[el] = input[i+1];
+            obj[el] = Number(input[i+1]);
         }
     });
     console.log(obj);
