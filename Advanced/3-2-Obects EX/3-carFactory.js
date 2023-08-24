@@ -13,10 +13,8 @@ function carFactory({model, power, color, carriage, wheelsize}) {
     }else{
         engine = engines.monster;        
     } 
-    
-    if(wheelsize % 2 === 0) {
-        wheelsize -1       
-    }
+    let newWheelSize = wheelsize % 2 !== 0 ? wheelsize : wheelsize -1
+   
         const car = {
         model,
         engine,
@@ -24,7 +22,7 @@ function carFactory({model, power, color, carriage, wheelsize}) {
             type : carriage, 
             color ,
         },
-        wheels : Array(4).fill(wheelsize)   
+        wheels : Array(4).fill(newWheelSize)   
     }
     return car
 }
