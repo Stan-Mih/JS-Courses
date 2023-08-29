@@ -19,20 +19,20 @@ function jansNotation(input) {
             }
         }
     });
-    if(nums.length > 1) console.log("Error: too many operands!");   //too many operands!
+    if(nums.length > 1) console.log("Error: too many operands!");   
     else if(!flag)console.log(nums[0]); 
     
 }
-// jansNotation([3,
-//     4,
-//     '+']
-//    )
-// jansNotation([5,
-//     3,
-//     4,
-//     '*',
-//     '-']
-//    )
+jansNotation([3,
+    4,
+    '+']
+   )
+jansNotation([5,
+    3,
+    4,
+    '*',
+    '-']
+   )
 jansNotation([7,
     33,
     8,
