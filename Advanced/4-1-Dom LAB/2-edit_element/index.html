@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Element Editor</title>
+  </head>
+  <body>
+    <script>
+      function replace(ref, match, replacer) {
+        const pattern = new RegExp(match, "g");
+        const text = ref.textContent;
+        const result = text.replace(pattern, replacer);
+        ref.textContent = result;
+      }
+    </script>
+    <h1>Replace element</h1>
+    <h2>element to be replaced with another element</h2>
+  </body>
+</html>

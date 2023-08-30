@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clickable buttons</title>
+    <script src="multiplicatation.js"></script>
+    <script>
+      function consolePrint() {
+        console.log("function invoked");
+      }
+      function sum(a, b) {
+        console.log(a + b);
+      }
+    </script>
+    <h1>Clickable buttons</h1>
+    <button onclick="console.log('Button clicked');">Click Me!</button>
+    <button class="alert" onclick="alert('Alert trigerd!')">Alert button!</button>
+    <button onclick="consolePrint()">Call Function</button>
+    <button onclick="sum(5,6)">Sum of 5 + 6</button>
+    <button onclick="multiplicatation(2,3)">multiplicatation</button>
+    <ul>
+      <li>First item</li>
+      <li>Seccond item</li>
+    </ul>
+  </head>
+  <body></body>
+</html>
