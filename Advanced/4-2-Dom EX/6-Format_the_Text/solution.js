@@ -13,7 +13,7 @@ function solve() {
     counter++;
     if (counter === 3) {
       const para = document.createElement("p");
-      const node = document.createTextNode(temp.join("."));
+      const node = document.createTextNode(`${temp.join(".")}.`);
       para.appendChild(node);
       out.appendChild(para);
       counter = 0;
