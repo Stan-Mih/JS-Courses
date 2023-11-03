@@ -10,6 +10,7 @@ function area (radius) {
     }else{
         console.log(`Can't calculate input is ${type}`);
     }
+    
 
 }area(5)
 area("name")
